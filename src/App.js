@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import calculate, { add, multiply, subtract, divide } from "./calculator";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        <li> {calculate.add(1, 2)} </li>
+        <li> {calculate.multiply(1, 2)} </li>
+        <li> {calculate.subtract(1, 2)} </li>
+        <li> {calculate.divide(1, 2)} </li>
+      </ul>
     </div>
   );
 }
-
-export default App;
